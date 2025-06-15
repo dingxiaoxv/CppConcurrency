@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(threadsafe_queue_noexcept)
+project(threadsafe_queue_original)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -14,8 +14,8 @@ set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # 添加可执行文件
-add_executable(threadsafe_queue_noexcept src/main.cpp)
+add_executable(threadsafe_queue_original src/main.cpp)
 
 # 链接pthread库
 find_package(Threads REQUIRED)
-target_link_libraries(threadsafe_queue_noexcept PRIVATE Threads::Threads)
+target_link_libraries(threadsafe_queue_original PRIVATE Threads::Threads)
