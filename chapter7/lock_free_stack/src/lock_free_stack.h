@@ -8,7 +8,7 @@ class lock_free_stack {
   struct counted_node_ptr {
     int external_count;
     node* ptr;
-  };
+  } __attribute__((aligned(16)));
   struct node {
     std::shared_ptr<T> data;
     std::atomic<int> internal_count;
