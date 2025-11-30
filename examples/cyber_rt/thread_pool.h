@@ -32,7 +32,7 @@ namespace utils {
 
 class ThreadPool {
  public:
-  explicit ThreadPool(std::size_t thread_num, std::size_t max_task_num = 1000);
+  explicit ThreadPool(std::size_t thread_num, std::size_t max_task_num = 1 << 10);
 
   template <typename F, typename... Args>
   auto enqueue(F&& f, Args&&... args)
